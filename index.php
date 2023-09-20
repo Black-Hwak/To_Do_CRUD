@@ -46,7 +46,9 @@
             <td><?php echo date("Y-m-d",strtotime($value['created_at'])); ?></td>
             <td>
             <a href="edit.php?id=<?php echo $value['id'];?>" class="btn btn-warning">Edit <i class="bi bi-pencil-square mx-2"></i></a>
-            <a href="delete.php?id=<?php echo $value['id'];?>" class="btn btn-danger mx-3">Delete <i class="bi bi-trash3-fill mx-2"></i></a>
+            <a href="delete.php?id=<?php echo $value['id'];?>" onclick="return confirm('Are You Sure To Delete?');" class="btn btn-danger mx-3">Delete 
+            <i class="bi bi-trash3-fill mx-2"></i>
+            </a>
             
             </td>
         </tr>
